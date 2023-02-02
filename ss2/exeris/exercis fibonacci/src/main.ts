@@ -3,8 +3,8 @@ function fibonacci( num:number): number {
     return fibonacci(num - 1) + fibonacci(num - 2);
 }
 let sum : number = 0;
-// let num:number = + prompt("nhập số fibonacci");
-// for (let i = 0; i <num ; i++) {
-//     sum += fibonacci(i)
-// }
-// console.log(" tổng " + num + " số fibonacci là :" + sum)
+let num:number = + prompt("nhập số fibonacci");
+ for (let i = 0; i <num ; i++) {
+    sum += fibonacci(i)
+}
+console.log(" tổng " + num + " số fibonacci là :" + sum)

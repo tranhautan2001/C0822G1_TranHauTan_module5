@@ -1,0 +1,5 @@
+<p [ngStyle]="{color: color.name}">color works!</p>
+<p [ngStyle]="{color: color.color}">color works!</p>
+changer color<input type="color" [value]="color.name" (change)="changerColorOfStudent($event.target)">
+changer color<input type="color" [(ngModel)]="color.color">
+

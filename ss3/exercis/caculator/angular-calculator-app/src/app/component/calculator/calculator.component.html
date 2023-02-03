@@ -1,0 +1,17 @@
+<h1>caculator</h1>
+<p>số thứ nhất</p>
+<input type="number" [(ngModel)]="firstNumber">
+<br>
+<p>dấu</p>
+<select [(ngModel)]="operator">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<br>
+<p>số thứ hai</p>
+<input type="number" [(ngModel)]="secondNumber">
+
+<button (click)="calculate()">Calculate</button>
+<p *ngIf="result">Result: {{result}}</p>

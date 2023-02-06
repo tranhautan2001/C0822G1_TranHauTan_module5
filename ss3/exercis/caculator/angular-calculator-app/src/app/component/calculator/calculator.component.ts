@@ -28,7 +28,6 @@ export class CalculatorComponent implements OnInit {
         break;
       case '/':
         this.result = this.firstNumber / this.secondNumber;
-        break;
     }
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {color} from "../model/color";
+import {Color} from "../model/color";
 
 @Component({
   selector: 'app-color',
@@ -8,7 +8,7 @@ import {color} from "../model/color";
 })
 export class ColorComponent implements OnInit {
 
-  color: color = {id: 5 , name: "tân" , color: "blue"  }
+  color: Color = {id: 5 , name: "tân" , color: "blue"  }
 
   constructor() { }
 

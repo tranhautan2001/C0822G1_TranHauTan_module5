@@ -22,7 +22,7 @@ import { FacilityEditComponent } from './component/facility/facility-edit/facili
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

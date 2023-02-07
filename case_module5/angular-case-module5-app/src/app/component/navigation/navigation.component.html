@@ -3,16 +3,16 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <div class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;margin-left: 300px">
         <li class="nav-item">
-          <a style="color: white" class="nav-link active" aria-current="page" href="/">Home</a>
+          <a style="color: white" class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
           <a style="color: white" class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Employee</a>
         </li>
         <li class="nav-item">
-          <a style="color: white" class="nav-link active" aria-current="page" href="/customer">Customer</a>
+          <a style="color: white" class="nav-link active" aria-current="page" >Customer</a>
         </li>
         <li class="nav-item">
-          <a style="color: white" class="nav-link active" aria-current="page" href="/facility">Facility</a>
+          <a style="color: white" class="nav-link active" aria-current="page" [routerLink]="['/facility-list']">Facility</a>
         </li>
         <li class="nav-item">
           <a style="color: white" class="nav-link active" aria-current="page" href="/contract">Contract</a>

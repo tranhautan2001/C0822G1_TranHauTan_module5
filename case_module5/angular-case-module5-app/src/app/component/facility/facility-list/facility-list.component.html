@@ -1,0 +1,33 @@
+<app-header></app-header>
+<app-navigation></app-navigation>
+<h1 style="text-align: center"> FACILITY </h1>
+
+<table class="table table-info">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Name</th>
+    <th>Area</th>
+    <th>Cost</th>
+    <th>Max People</th>
+    <th>Description Other Convenience</th>
+    <th>Pool Area</th>
+    <th>Number Floors</th>
+    <th>Facility Free</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let temp of facilityList; index as i">
+    <td>{{i}}</td>
+    <td>{{temp.name}}</td>
+    <td>{{temp.area}}</td>
+    <td>{{temp.cost}}</td>
+    <td>{{temp.maxPeople}}</td>
+    <td>{{temp.descriptionOtherConvenience}}</td>
+    <td>{{temp.poolArea}}</td>
+    <td>{{temp.numberOfFloors}}</td>
+    <td>{{temp.facilityFree}}</td>
+  </tr>
+  </tbody>
+</table>
+<app-footer></app-footer>

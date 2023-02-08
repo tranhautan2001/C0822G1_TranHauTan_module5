@@ -1,11 +1,14 @@
-<h1>Countdown Timer</h1>
+<h1 style="color: aqua">Đồng hồ đếm ngược</h1>
 
-<div class="group-actions">
-  <button (click)="start()">Start</button>
-  <button (click)="stop()">Stop</button>
-  <button (click)="reset()">Reset</button>
-</div>
-<div class="timer">
-  <span class="timer-text">{{ remainingTime }}</span>
-</div>
-<p>{{ message }}</p>
+<table>
+  <div class="group-actions">
+    <button (click)="start()"> Bắt Đầu </button>
+    <button (click)="stop()"> Dừng </button>
+    <button (click)="reset()"> Bắt Đầu Lại </button>
+  </div>
+  <div class="timer">
+    <span class="timer-text">{{ remainingTime }}</span>
+  </div>
+  <p style="color: red">{{ message }}</p>
+
+</table>

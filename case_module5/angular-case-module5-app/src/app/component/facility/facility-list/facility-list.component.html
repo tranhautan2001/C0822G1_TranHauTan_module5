@@ -2,6 +2,8 @@
 <app-navigation></app-navigation>
 <h1 style="text-align: center"> FACILITY </h1>
 
+<button class="btn btn-danger" [routerLink]="['/facility-create']">Thêm Mới </button>
+
 <table class="table table-info">
   <thead>
   <tr>
@@ -30,15 +32,16 @@
     <td>{{temp.numberOfFloors}}</td>
     <td>{{temp.facilityFree}}</td>
     <td>
-      <button class="table-danger" [routerLink]="['/facility-edit']">EDIT</button>
+      <button class="btn btn-danger" [routerLink]="['/facility-edit']">EDIT</button>
     </td>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Delete
-    </button>
+    </button></td>
   </tr>
   </tbody>
 </table>
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

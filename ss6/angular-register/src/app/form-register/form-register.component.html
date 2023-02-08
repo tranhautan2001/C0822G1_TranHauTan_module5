@@ -1,0 +1,59 @@
+<h1>Form Đăng Ký</h1>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Email :</label><br>
+    <input type="text" formControlName="email" name="email"><br>
+    <a style="color:red" *ngIf="reactiveForm.controls.email.hasError('required')&& reactiveForm.controls.email.touched">Email
+      không được để trống</a>
+    <a style="color:red" *ngIf="reactiveForm.controls.email.hasError('email')">Nhập đúng định dạng email</a>
+    <br>
+    <label>PassWord</label><br>
+    <input type="text" formControlName="password" name="password"><br>
+    <a style="color:red"
+       *ngIf="reactiveForm.controls.password.hasError('required')&& reactiveForm.controls.password.touched">Password
+      không được để trống</a>
+    <a style="color:red"
+       *ngIf="reactiveForm.controls.password.hasError('minlength')&& reactiveForm.controls.password.touched">Password
+      dài hơn 6 ký tự</a>
+    <br>
+    <label>ConfirmPassword</label><br>
+    <input type="text" formControlName="confirmPassword" name="confirmPassword"><br>
+    <a style="color:red"
+       *ngIf="reactiveForm.controls.confirmPassword.hasError('required')&& reactiveForm.controls.confirmPassword.touched">confirmPassword
+      không được để trống</a>
+    <br>
+    <select>Country
+      <option>Việt Nam</option>
+      <option>Hàn Quốc</option>
+      <a style="color:red"
+         *ngIf="reactiveForm.controls.country.hasError('required')&& reactiveForm.controls.country.touched">country
+        không được để trống</a>
+
+    </select>
+    <br>
+    <label>Age</label><br>
+    <input type="number" formControlName="age" name="age"><br>
+    <a style="color:red" *ngIf="reactiveForm.controls.age.hasError('required')&& reactiveForm.controls.age.touched">age
+      không được để trống</a>
+    <a style="color:red" *ngIf="reactiveForm.controls.age.hasError('min')&& reactiveForm.controls.age.touched">tuổi phải
+      lớn hơn 18</a>
+    <br>
+    <label>Gender</label><br>
+    <input type="radio" formControlName="gender" name="nam">Nam
+    <input type="radio" formControlName="gender" name="nu">Nữ<br>
+    <a style="color:red" *ngIf="reactiveForm.controls.nam.hasError('required')&& reactiveForm.controls.nam.touched">nam
+      không được để trống</a>
+    <a style="color:red" *ngIf="reactiveForm.controls.nu.hasError('required')&& reactiveForm.controls.nu.touched">nu
+      không được để trống</a>
+    <br>
+    <label>Phone</label><br>
+    <input type="text" formControlName="phone" name="phone"><br>
+    <a style="color:red" *ngIf="reactiveForm.controls.phone.hasError('required')&& reactiveForm.controls.phone.touched">phone
+      không được để trống</a>
+    <br>
+    <input type="submit" value="thêm mới">
+  </div>
+
+</form>
+

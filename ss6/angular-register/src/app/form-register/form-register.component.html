@@ -22,10 +22,15 @@
     <a style="color:red"
        *ngIf="reactiveForm.controls.confirmPassword.hasError('required')&& reactiveForm.controls.confirmPassword.touched">confirmPassword
       không được để trống</a>
+    <a style="color:red"
+       *ngIf="reactiveForm.controls.confirmPassword.hasError('minlength')&& reactiveForm.controls.confirmPassword.touched">Password
+      dài hơn 6 ký tự</a>
     <br>
     <select>Country
       <option>Việt Nam</option>
       <option>Hàn Quốc</option>
+      <option value="">Chọn quốc gia</option>
+      <option *ngFor="let c of country" [ngValue]="c" [text]="c.name"></option>
       <a style="color:red"
          *ngIf="reactiveForm.controls.country.hasError('required')&& reactiveForm.controls.country.touched">country
         không được để trống</a>

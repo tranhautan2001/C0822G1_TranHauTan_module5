@@ -8,7 +8,7 @@ import validate = WebAssembly.validate;
   styleUrls: ['./form-register.component.css']
 })
 export class FormRegisterComponent implements OnInit {
-
+  country = [{id: 1, name: 'VN'}, {id: 2, name: 'Japan'}, {id: 3, name: 'Korea'}]
   reactiveForm: FormGroup;
 
   constructor() {
@@ -16,7 +16,7 @@ export class FormRegisterComponent implements OnInit {
       {
         email: new FormControl("", [Validators.required,Validators.email]),
         password: new FormControl("", [Validators.required,Validators.minLength(6)]),
-        confirmPassword: new FormControl("", [Validators.required]),
+        confirmPassword: new FormControl("", [Validators.required,Validators.minLength(6)]),
         country: new FormControl("",[Validators.required]),
         age: new FormControl("",[Validators.required,Validators.min(18)]),
         gender: new FormControl("",[Validators.required]),

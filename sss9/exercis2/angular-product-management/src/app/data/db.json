@@ -1,0 +1,44 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "gg",
+      "price": 1,
+      "description": "tt",
+      "category": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "id": 2,
+      "name": "hhll",
+      "price": 5,
+      "description": "hhh",
+      "category": {
+        "id": 2,
+        "name": "hh",
+        "price": 5,
+        "description": "hhh",
+        "category": {
+          "id": 2,
+          "name": "Samsung"
+        }
+      }
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Iphone"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi"
+    }
+  ]
+}

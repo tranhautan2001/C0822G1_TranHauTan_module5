@@ -1,11 +1,16 @@
+import {CustomerType} from "./customer-type";
+
 export interface Customer {
-   id: number;
-   name:string;
-   dateOfBirth:string;
-   email: string;
-   idCard:string;
-   gender: string;
-   phoneNumber:string;
-   address: string;
+  id?: number;
+  customerCode?:string;
+  customerType?: CustomerType;
+  name?:string
+  dateOfBirth?:string
+  idCard?:string
+  phoneNumber?:string
+  gender?:boolean
+  email?:string
+  address?:string
+
 
 }

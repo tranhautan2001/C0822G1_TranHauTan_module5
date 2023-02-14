@@ -3,7 +3,7 @@ import {CustomerService} from "../../../service/customer.service";
 import {CustomerTypeService} from "../../../service/customer-type.service";
 import {Router} from "@angular/router";
 import {CustomerType} from "../../../model/customer-type";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-customer-create',
@@ -16,15 +16,15 @@ export class CustomerCreateComponent implements OnInit {
 
   customerForm: FormGroup = new FormGroup({
     id: new FormControl(),
-    customerCode: new FormControl(),
-    customerType: new FormControl(),
-    name: new FormControl(),
-    dateOfBirth: new FormControl(),
-    idCard: new FormControl(),
-    phoneNumber: new FormControl(),
-    gender: new FormControl(),
-    email: new FormControl(),
-    address: new FormControl(),
+    customerCode: new FormControl("",[Validators.required]),
+    customerType: new FormControl("",[Validators.required]),
+    name: new FormControl("",[Validators.required]),
+    dateOfBirth: new FormControl("",[Validators.required]),
+    idCard: new FormControl("",[Validators.required]),
+    phoneNumber: new FormControl("",[Validators.required]),
+    gender: new FormControl("",[Validators.required]),
+    email: new FormControl("",[Validators.required]),
+    address: new FormControl("",[Validators.required]),
   })
 
   constructor(private customerService: CustomerService,

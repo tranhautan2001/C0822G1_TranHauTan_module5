@@ -111,6 +111,36 @@
       "email": "kimcuong84@gmail.com",
       "address": "K123/45 Lê Lợi, Hồ Chí Minh",
       "flagDelete": false
+    },
+    {
+      "id": 8,
+      "customerCode": "2",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "name": "2",
+      "dateOfBirth": "2",
+      "idCard": "2",
+      "phoneNumber": null,
+      "gender": true,
+      "email": "2",
+      "address": "2"
+    },
+    {
+      "id": 9,
+      "customerCode": "ret",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "name": "rtre",
+      "dateOfBirth": "ểtr",
+      "idCard": "rêtr",
+      "phoneNumber": "ẻt",
+      "gender": true,
+      "email": "ẻt",
+      "address": "rt"
     }
   ],
   "customerType": [
@@ -135,7 +165,7 @@
       "name": "Member"
     }
   ],
-  "contract":[
+  "contract": [
     {
       "id": 1,
       "startDate": "h",
@@ -154,7 +184,7 @@
       }
     }
   ],
-  "AttachFacility" :[
+  "AttachFacility": [
     {
       "id": 1,
       "name": "h",

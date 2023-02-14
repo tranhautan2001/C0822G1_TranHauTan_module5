@@ -11,6 +11,7 @@ export class CustomerListComponent implements OnInit {
 
 customerList: Customer[] =[]
   delete: Customer = {};
+  page: string | number;
 
   constructor(private customerService: CustomerService) {
   this.getAll();

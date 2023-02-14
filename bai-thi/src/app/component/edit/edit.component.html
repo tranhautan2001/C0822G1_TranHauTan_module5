@@ -1,1 +1,29 @@
-<p>edit works!</p>
+<h1>Chỉnh Sửa Khách Hàng</h1>
+<form [formGroup]="customerForm" (ngSubmit)="updateCustomer()">
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>area</td>
+      <td><input type="text" formControlName="area"></td>
+    </tr>
+    <tr>
+      <td>cost</td>
+      <td><input type="text" formControlName="cost"></td>
+    </tr>
+    <tr>
+      <td>maxPeople</td>
+      <td><input type="text" formControlName="maxPeople"></td>
+    </tr>
+    <tr>
+      <td>poolArea</td>
+      <td><input type="text" formControlName="poolArea"></td>
+    </tr>
+    <select formControlName="customerType" [compareWith]="compareWith">Loại
+      <option *ngFor="let demo of customerTypeList" [ngValue]="demo">{{demo.name}}</option>
+    </select>
+    <button type="submit">Luu</button>
+  </table>
+</form>

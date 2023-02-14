@@ -13,20 +13,8 @@
       }
     },
     {
-      "id": 2,
-      "name": "d",
-      "area": "d",
-      "cost": "d",
-      "maxPeople": "d",
-      "poolArea": "d",
-      "customerType": {
-        "id": 1,
-        "name": "Iphone"
-      }
-    },
-    {
       "id": 3,
-      "name": "",
+      "name": "H",
       "area": "d",
       "cost": "d",
       "maxPeople": "d",
@@ -43,6 +31,18 @@
       "cost": "f",
       "maxPeople": "f",
       "poolArea": "f",
+      "customerType": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "id": 5,
+      "name": "F",
+      "area": "H",
+      "cost": "H",
+      "maxPeople": "H",
+      "poolArea": "H",
       "customerType": {
         "id": 1,
         "name": "Iphone"

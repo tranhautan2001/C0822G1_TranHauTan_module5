@@ -18,8 +18,13 @@ export class CustomerService {
     return this.httpClient.post("http://localhost:3000/customer",customer)
 
   }
-
   searchCustomer(name: string) {
     return this.httpClient.get<Customer[]>("http://localhost:3000/customer?name_like="+name)
+  }
+  findById(id: number){
+    return this.httpClient.get<Customer>("http://localhost:3000/customer/" +id)
+  }
+  updateCustomer(id: number, customer: Customer){
+    return this.httpClient.put("http://localhost:3000/customer/"+id,customer)
   }
 }

@@ -21,7 +21,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let temp of customerList; index as i">
+  <tr *ngFor="let temp of customerList | paginate: { itemsPerPage: 5, currentPage: page}; index as i">
     <td>{{i}}</td>
     <td>{{temp.customerCode}}</td>
     <td>{{temp.customerType.name}}</td>
@@ -45,6 +45,9 @@
   </tr>
   </tbody>
 </table>
+<div class="has-text-centered">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">

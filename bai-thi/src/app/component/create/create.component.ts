@@ -4,7 +4,6 @@ import {CustomerTypeService} from '../../service/customer-type.service';
 import {Router} from '@angular/router';
 import {CustomerType} from '../../model/customer-type';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {isFromDtsFile} from '@angular/compiler-cli/src/ngtsc/util/src/typescript';
 
 @Component({
   selector: 'app-create',

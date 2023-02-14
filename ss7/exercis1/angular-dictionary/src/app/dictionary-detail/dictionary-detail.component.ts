@@ -1,23 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-
-import {DictionaryService} from "../service/dictionary-service.service";
-import {Iword} from "../model/iword";
-
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {DictionayService} from '../../service/dictionay.service';
+import {Word} from '../../model/word';
 
 @Component({
-  selector: 'app-dictionay-page',
-  templateUrl: './dictionay-page.component.html',
-  styleUrls: ['./dictionay-page.component.css']
+  selector: 'app-dictionary-detail-component',
+  templateUrl: './dictionary-detail-component.component.html',
+  styleUrls: ['./dictionary-detail-component.component.css']
 })
-export class DictionayPageComponent implements OnInit {
+export class DictionaryDetailComponentComponent implements OnInit {
+  id: number;
+  word: Word;
 
-  words: Iword[]=[];
-
-  constructor(private dictionaryService: DictionaryService) {
-    this.words = this.dictionaryService.getAll();
+  constructor(private activatedRoute: ActivatedRoute, private dictionary: DictionayService) {
+    this.activatedRoute.paramMap.subscribe(next => {
+      this.id = +next.get('id');
+    });
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getWord();
+  }
+
+  getWord() {
+    this.word = this.dictionary.findById(this.id);
   }
 
 }

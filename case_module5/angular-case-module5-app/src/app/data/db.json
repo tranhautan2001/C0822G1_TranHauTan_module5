@@ -134,5 +134,50 @@
       "id": 5,
       "name": "Member"
     }
+  ],
+  "contract":[
+    {
+      "id": 1,
+      "startDate": "h",
+      "endDate": "h",
+      "deposit": "h",
+      "AttachFacility": {
+        "id": 1,
+        "name": "h",
+        "cost": "h",
+        "unit": "h",
+        "status": "h",
+        "ContractDetail": {
+          "id": 1,
+          "nam": "h"
+        }
+      }
+    }
+  ],
+  "AttachFacility" :[
+    {
+      "id": 1,
+      "name": "h",
+      "cost": "h",
+      "unit": "h",
+      "status": "h"
+    },
+    {
+      "id": 2,
+      "name": "j",
+      "cost": "j",
+      "unit": "j",
+      "status": "j"
+    }
+  ],
+  "ContractDetail": [
+    {
+      "id": 1,
+      "nam": "h"
+    },
+    {
+      "id": 2,
+      "nam": "k"
+    }
   ]
 }

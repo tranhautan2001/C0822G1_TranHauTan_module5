@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76a7a3f1-34cb-48b3-bb3c-e48e34f753f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/component/customer/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/component/customer/customer-list/customer-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/model/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/model/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/app/data/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/case_module5/angular-case-module5-app/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sss9/exercis2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ss4/practice/angular-hackernews-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,6 +70,7 @@
       <workItem from="1675417222879" duration="4000" />
       <workItem from="1675544999088" duration="961000" />
       <workItem from="1676278575299" duration="18000" />
+      <workItem from="1676339291023" duration="104000" />
     </task>
     <servers />
   </component>
@@ -93,9 +95,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1676278586972">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1676339393018">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1676278586972" />
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1676339393018" />
   </component>
 </project>

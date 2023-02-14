@@ -11,6 +11,8 @@
     <th>StartDate</th>
     <th>EndDate</th>
     <th>Deposit</th>
+    <th>AttachFacilityName</th>
+    <th>ContractDetailName</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
@@ -21,6 +23,8 @@
     <td>{{temp.startDate}}</td>
     <td>{{temp.endDate}}</td>
     <td>{{temp.deposit}}</td>
+    <td>{{temp.AttachFacility.name}}</td>
+    <td>{{temp.ContractDetail.name}}</td>
     <td>
       <button class="btn btn-danger" [routerLink]="['/contract-edit']">EDIT</button>
     </td>

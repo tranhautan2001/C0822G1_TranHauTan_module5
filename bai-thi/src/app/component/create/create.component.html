@@ -1,0 +1,31 @@
+<h1>Them moi khach hang</h1>
+<form [formGroup]="customerForm" (ngSubmit)="createCustomer()" >
+  <table>
+    <tr>
+      <td>name</td>
+      <td><input type="text" formControlName="name"></td>
+      <p style="color: red" *ngIf="customerForm.controls.name.hasError('required') && customerForm.controls.name.touched">khong dc de trong</p>
+    </tr>
+    <tr>
+      <td>area</td>
+      <td><input type="text" formControlName="area"></td>
+    </tr>
+    <tr>
+      <td>cost</td>
+      <td><input type="text" formControlName="cost"></td>
+    </tr>
+    <tr>
+      <td>maxPeople</td>
+      <td><input type="text" formControlName="maxPeople"></td>
+    </tr>
+    <tr>
+      <td>poolArea</td>
+      <td><input type="text" formControlName="poolArea"></td>
+    </tr>
+    <select formControlName="customerType">
+      <option *ngFor="let demo of customerTypeList" [ngValue]="demo">{{demo.name}}</option>
+    </select>
+    <button type="submit">Luu</button>
+  </table>
+</form>
+

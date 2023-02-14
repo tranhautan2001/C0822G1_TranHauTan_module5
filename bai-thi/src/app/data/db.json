@@ -1,0 +1,66 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "area": "typicode",
+      "cost": "typicode",
+      "maxPeople": "typicode",
+      "poolArea": "typicode",
+      "customerType": {
+        "id": 2,
+        "name": "Samsung"
+      }
+    },
+    {
+      "id": 2,
+      "name": "d",
+      "area": "d",
+      "cost": "d",
+      "maxPeople": "d",
+      "poolArea": "d",
+      "customerType": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "id": 3,
+      "name": "",
+      "area": "d",
+      "cost": "d",
+      "maxPeople": "d",
+      "poolArea": "d",
+      "customerType": {
+        "id": 2,
+        "name": "Samsung"
+      }
+    },
+    {
+      "id": 4,
+      "name": "f",
+      "area": "f",
+      "cost": "f",
+      "maxPeople": "f",
+      "poolArea": "f",
+      "customerType": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Iphone"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi"
+    }
+  ]
+}

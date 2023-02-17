@@ -1,63 +1,113 @@
-<h1>Danh sach san pham</h1>
-<button type="button" [routerLink]="['/create']" >Them moi</button>
-
-<div class="d-flex">
-  <input #name class="form-control me-2" type="search" placeholder="name" aria-label="Search">
-  <button class="btn btn-outline-success" (click)="search(name.value)">Search</button>
+<div class="container-fluid">
+  <div  class="row" style="height: 100px">
+    <div class="col-2" style="background-color: darkcyan;display: flex;justify-content: center">
+      <img src="https://furamavietnam.com/wp-content/uploads/2018/10/logo.png" height="100" width="70"/></div>
+    <div class="col-7" style="background-color: darkcyan;display: flex;justify-content: center">
+      <div class="row1">
+        <span style="font-size: 12px">103 – 105 Đường Võ Nguyên Giáp, Phường Khuê Mỹ,</span>
+        <br>
+        <span style="font-size: 12px">  Quận Ngũ hành Sơn, Tp. Đà Nẵng, Việt Nam</span><br>
+        <span style="font-size: 12px"> 7.0 km từ Sân bay Quốc tế Đà Nẵng</span><br>
+        <span style="font-size: 12px">  84-236-3847 333/888</span><br>
+        <span style="font-size: 12px">  reservation@furamavietnam.com</span>
+      </div>
+    </div>
+    <div class="col-3" style="background-color: darkcyan;display: flex;justify-content: center">
+      <a  style="margin-top: 35px;font-size: 23px"> Trần Hậu Tân</a>
+    </div>
+  </div>
 </div>
 
-<table class="table table-secondary" >
+<br>
+<br>
+<br>
+<h1 style="color: red">DANH SÁCH BỆNH VIỆN</h1>
+<br>
+<br>
+<table class="table table-info">
   <thead>
   <tr>
     <td>STT</td>
-    <td>Name</td>
-    <td>Area</td>
-    <td>Cost</td>
-    <td>Max People</td>
-    <td>Pool Area</td>
-    <td>Customer Type</td>
-    <td>Delete</td>
-    <td>Edit</td>
+    <td>Ngày Nhập Viện</td>
+    <td>Ngày Ra Viện</td>
+    <td>Lý Nhập Viện</td>
+    <td>Phương Pháp Điều Trị </td>
+    <td>Bác Sĩ Điều trị</td>
+    <td>Tên Bệnh Án</td>
+    <td>Chỉnh Sủa</td>
+    <td>Xóa</td>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let temp of customerList ; index as i">
+  <tr *ngFor="let benhAn of benhAnList ; index as i ">
     <td>{{i+1}}</td>
-    <td>{{temp.name}}</td>
-    <td>{{temp.area}}</td>
-    <td>{{temp.cost}}</td>
-    <td>{{temp.maxPeople}}</td>
-    <td>{{temp.poolArea}}</td>
-    <td>{{temp.customerType.name}}</td>
+    <td>{{benhAn.ngayNhapVien}}</td>
+    <td>{{benhAn.ngayRaVien}}</td>
+    <td>{{benhAn.lyDoNhapVien}}</td>
+    <td>{{benhAn.phuongPhapDieuTri}}</td>
+    <td>{{benhAn.bacSiDieuTri}}</td>
+    <td>{{benhAn.benhNhan.tenBenhNhan}}</td>
     <td>
-      <button type="button" [routerLink]="['/edit',temp.id]">Edit</button>
+      <button type="button" class="btn btn-primary" [routerLink]="['/edit',benhAn.id]">Edit</button>
     </td>
     <td>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              (click)="customers = temp">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="temp = benhAn">
         Delete
       </button>
     </td>
   </tr>
   </tbody>
 </table>
+
+
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Modal Xóa</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Bạn có muốn xóa product: {{customers.name}}
+        Bạn có muốn xóa Bệnh Án: <a style="color: red">{{temp.bacSiDieuTri}}</a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deleteProduct()">
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deleteBenhAn()">
           Delete
         </button>
       </div>
     </div>
   </div>
 </div>
+
+
+<div>
+  <div class="container-fluid">
+    <div class="row" style="height:300px">
+      <div class="col-1 " style="background-color: blue">
+      </div>
+      <div class="col-3" style="background-color: white">
+        <span style="font-size: 25px; display: flex; justify-content: center">Hướng Dẫn Di Chuyển</span><br>
+        <span style="font-size: 12px">Khu nghỉ dưỡng Furama là cơ sở hàng đầu để</span>
+        <span style="font-size: 12px">khám phá một trong những điểm đến hấp dẫn</span>
+        <span style="font-size: 12px">nhất Châu Á. Chỉ cách Đà Nẵng một quãng lái xe</span>
+        <span style="font-size: 12px">ngắn là bốn Di sản Văn hóa Thế giới được</span>
+        <span style="font-size: 12px">UNESCO công nhận:</span>
+        <br>
+        <br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+             class="bi bi-geo-alt" viewBox="0 0 16 16">
+          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+        <button style="background-color:darkgreen; color: white"> Xem Trên Bản Đồ</button>
+        <br>
+        <a style="font-size: 25px; display: flex; justify-content: center">Địa Điểm</a>
+      </div>
+      <div class="col-8" style="background-color:red">
+      </div>
+    </div>
+  </div>
+</div>
+

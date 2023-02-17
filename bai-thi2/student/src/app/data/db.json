@@ -1,0 +1,54 @@
+{
+  "student": [
+    {
+      "id": 2,
+      "name": "g",
+      "dateOfBirth": "2023-02-17",
+      "point": "g",
+      "email": "g",
+      "address": "g",
+      "Class": {
+        "id": 1,
+        "name": "c0822g1"
+      }
+    },
+    {
+      "id": 3,
+      "name": "dd",
+      "dateOfBirth": "gggg",
+      "point": "d",
+      "email": "d",
+      "address": "d",
+      "Class": {
+        "id": 1,
+        "name": "c0822g1"
+      }
+    },
+    {
+      "id": 4,
+      "name": "fgg",
+      "dateOfBirth": null,
+      "point": "gg",
+      "email": "gg",
+      "address": "gg",
+      "Class": {
+        "id": 2,
+        "name": "c0722g1"
+      }
+    }
+  ],
+  "Class": [
+    {
+      "id": 1,
+      "name": "c0822g1"
+    },
+    {
+      "id": 2,
+      "name": "c0722g1"
+    },
+    {
+      "id": 3,
+      "name": "c0622g1"
+    }
+  ]
+}

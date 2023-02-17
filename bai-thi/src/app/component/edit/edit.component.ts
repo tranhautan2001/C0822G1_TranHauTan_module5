@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import {CustomerService} from '../../service/customer.service';
-import {CustomerTypeService} from '../../service/customer-type.service';
-import {ActivatedRoute, Router} from '@angular/router';
-import {CustomerType} from '../../model/customer-type';
+import {Component, OnInit} from '@angular/core';
+import {BenhNhan} from '../../model/benh-nhan';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {BenhAnService} from '../../service/benh-an.service';
+import {BenhNhanService} from '../../service/benh-nhan.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {BenhAn} from '../../model/benh-an';
+import {ToastrService} from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-edit',
@@ -12,52 +15,56 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class EditComponent implements OnInit {
 
-  customerTypeList: CustomerType [] = [];
-  public compareWith(object1: CustomerType, object2: CustomerType): boolean {
-    return object1 && object2 ? object1.id === object2.id : object1 === object2;
-  }
+  benhNhanList: BenhNhan [] = [];
 
-  customerForm: FormGroup = new FormGroup({
+  benhAnForm: FormGroup = new FormGroup({
     id: new FormControl(),
-    name: new FormControl("",[Validators.required]),
-    area: new FormControl("",[Validators.required]),
-    cost: new FormControl("",[Validators.required]),
-    maxPeople: new FormControl("",[Validators.required]),
-    poolArea: new FormControl("",[Validators.required]),
-    customerType: new FormControl("",[Validators.required]),
-  })
+    ngayNhapVien: new FormControl("",[Validators.required]),
+    ngayRaVien: new FormControl("",[Validators.required]),
+    lyDoNhapVien: new FormControl("",[Validators.required]),
+    phuongPhapDieuTri: new FormControl("",[Validators.required]),
+    bacSiDieuTri: new FormControl("",[Validators.required]),
+    BenhNhan: new FormControl("",[Validators.required]),
+  });
 
-  constructor(private customerService: CustomerService,
-              private customerTypeService:CustomerTypeService,
+  constructor(private benhAnService: BenhAnService,
+              private benhNhanService: BenhNhanService,
+              private activatedRoute: ActivatedRoute,
               private router: Router,
-              private activatedRoute: ActivatedRoute) {
-      this.activatedRoute.paramMap.subscribe(next =>{
-        const id = +next.get('id')
-        if (id != null){
-          this.getCustomer(id);
-        }
-      })
+              private toastr: ToastrService) {
+    this.activatedRoute.paramMap.subscribe(data => {
+      const id = +data.get('id');
+      if (id != null) {
+        this.getAll(id);
+      }
+    });
 
   }
 
   ngOnInit() {
-    this.customerTypeService.getAllCustomerType().subscribe(next =>{
-      this.customerTypeList = next;
-    })
+    this.benhNhanService.getAllBenhNhan().subscribe(data => {
+      this.benhNhanList = data;
+    });
   }
 
-
-   getCustomer(id: number) {
-    return this.customerService.findById(id).subscribe(next=>{
-      this.customerForm.patchValue(next);
-    })
-
+  getAll(id: number) {
+    this.benhAnService.findById(id).subscribe(data => {
+      this.benhAnForm.patchValue(data);
+    });
   }
-  updateCustomer(){
-    const customer = this.customerForm.value;
-    this.customerService.updateCustomer(customer.id, customer).subscribe(next =>{
+
+  updateBenhAn() {
+    if (this.benhAnForm.valid){
+    const benhAn = this.benhAnForm.value;
+    this.benhAnService.update(benhAn.id,benhAn).subscribe(data => {
+      // alert('chinh sửa thành công');
+      this.toastr.success("chinh sửa thành công", "Chỉnh sửa")
       this.router.navigateByUrl('');
-      alert("sua thanh cong");
-    })
+    });
+  }
+  }
+
+  compareWith(object1: BenhAn, object2 : BenhAn): boolean {
+    return object2&& object1? object1.id === object2.id: object2===object1
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CustomerService} from '../../service/customer.service';
-import {Customer} from '../../model/customer';
+import {BenhAnService} from '../../service/benh-an.service';
+import {BenhAn} from '../../model/benh-an';
 
 @Component({
   selector: 'app-list',
@@ -9,35 +9,26 @@ import {Customer} from '../../model/customer';
 })
 export class ListComponent implements OnInit {
 
-  customerList: Customer[] = [];
-  customers: Customer ={};
-
-  constructor(private customerService: CustomerService) {
+  benhAnList: BenhAn [] = [];
+  temp: BenhAn = {};
+  constructor(private benhAnService: BenhAnService) {
     this.getAll();
   }
 
   ngOnInit(): void {
   }
 
-  private getAll() {
-    this.customerService.getAllCustomer().subscribe(next =>{
-      this.customerList = next;
+  getAll() {
+    this.benhAnService.getAllBenhAn().subscribe(data =>{
+      this.benhAnList = data;
     })
   }
 
-  deleteProduct() {
-    if (this.customers.id != null){
-      this.customerService.deleteCustomer(this.customers.id).subscribe(next =>{
-        this.getAll()
-        alert("xoa thanh cong")
-      })
-    }
+  deleteBenhAn() {
+  this.benhAnService.delete(this.temp.id).subscribe(data =>{
+    this.getAll()
+    alert("xóa thành công")
 
-  }
-
-  search(name: string) {
-    this.customerService.searchCustomer(name).subscribe(next =>{
-      this.customerList =next;
-    })
+  })
   }
 }

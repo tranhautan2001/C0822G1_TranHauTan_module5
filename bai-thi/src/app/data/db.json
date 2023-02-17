@@ -1,66 +1,30 @@
 {
-  "customer": [
-    {
-      "id": 1,
-      "name": "json-server",
-      "area": "typicode",
-      "cost": "typicode",
-      "maxPeople": "typicode",
-      "poolArea": "typicode",
-      "customerType": {
-        "id": 2,
-        "name": "Samsung"
-      }
-    },
+  "BenhAn": [
     {
       "id": 3,
-      "name": "H",
-      "area": "d",
-      "cost": "d",
-      "maxPeople": "d",
-      "poolArea": "d",
-      "customerType": {
-        "id": 2,
-        "name": "Samsung"
-      }
-    },
-    {
-      "id": 4,
-      "name": "f",
-      "area": "f",
-      "cost": "f",
-      "maxPeople": "f",
-      "poolArea": "f",
-      "customerType": {
-        "id": 1,
-        "name": "Iphone"
-      }
-    },
-    {
-      "id": 5,
-      "name": "F",
-      "area": "H",
-      "cost": "H",
-      "maxPeople": "H",
-      "poolArea": "H",
-      "customerType": {
-        "id": 1,
-        "name": "Iphone"
+      "ngayNhapVien": "2020-02-21",
+      "ngayRaVien": "2020-02-22",
+      "lyDoNhapVien": "Điều trị xong",
+      "phuongPhapDieuTri": "xoa bóp1",
+      "bacSiDieuTri": "bác Sĩ Hải",
+      "BenhNhan": {
+        "maBenhNhan": 3,
+        "tenBenhNhan": "nguyen van anh"
       }
     }
   ],
-  "customerType": [
+  "BenhNhan": [
     {
-      "id": 1,
-      "name": "Iphone"
+      "maBenhNhan": 1,
+      "tenBenhNhan": "nguyen van anh"
     },
     {
-      "id": 2,
-      "name": "Samsung"
+      "maBenhNhan": 2,
+      "tenBenhNhan": "nguyen van an"
     },
     {
-      "id": 3,
-      "name": "Xiaomi"
+      "maBenhNhan": 3,
+      "tenBenhNhan": "nguyen van b"
     }
   ]
 }

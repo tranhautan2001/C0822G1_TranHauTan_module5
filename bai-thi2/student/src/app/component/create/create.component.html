@@ -1,0 +1,30 @@
+<h1>Thêm mới học Sinh</h1>
+<form [formGroup]="studentForm" (ngSubmit)="createStudent()">
+  <table>
+    <tr>
+      <td>Tên Học sinh</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Ngày sinh</td>
+      <td><input type="date" formControlName="dateOfBirth"></td>
+    </tr>
+    <tr>
+      <td>Điểm Học sinh</td>
+      <td><input type="text" formControlName="point"></td>
+    </tr> <tr>
+    <td>email Học sinh</td>
+    <td><input type="text" formControlName="email"></td>
+  </tr>
+    <tr>
+      <td>address Học sinh</td>
+      <td><input type="text" formControlName="address"></td>
+    </tr>
+    <tr>
+      <select formControlName="Class">
+        <option *ngFor="let class of classList" [ngValue]="class">{{class.name}}</option>
+      </select>
+    </tr>
+ <button type="submit">Lưu</button>
+  </table>
+</form>
